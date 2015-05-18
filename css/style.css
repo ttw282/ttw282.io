@@ -85,6 +85,39 @@ span.menu {
 	-moz-transform: translateY(0px);
 	transform: translateY(0px);
 }
+a.download{
+	color:#fff !important;
+	font-size:20px;
+	text-transform:uppercase;
+	text-decoration:none !important;
+	background:#2980b9;
+	padding:20px 15px;
+	border-bottom:4px solid #6ab8ea;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-o-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	margin-left:0.5em;
+}
+a.download:hover{
+	background:#6ab8ea !important;
+	border-bottom:4px solid #2980b9 !important;
+	transition:0.5s all !important;
+	-webkit-transition:0.5s all !important;
+	-o-transition:0.5s all !important;
+	-ms-transition:0.5s all !important;
+	-moz-transition:0.5s all !important;
+}
+a.download span{
+	background:url(../images/dold.png)no-repeat;
+	width:32px;
+	height:32px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:0.5em;
+	
+}
 .social-icons{
 	float:right;
 	width: 13%;
