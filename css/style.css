@@ -24,6 +24,7 @@ body{
 }
 .header-logo a:hover{
 	text-decoration: none;
+	color:silver;
 }
 .header-logo a h1{
 	color:#1ba8ed;
@@ -141,16 +142,16 @@ a.download span{
 	transition:.5s all;
 }
 .social-icons ul li a.linkedin{
-	background: url(../images/icons-sprite.png) no-repeat -182px 0;
+	background: url(../images/icons-sprite.png) no-repeat -178px 0;
 }
 .social-icons ul li a.linkedin:hover{
-	background: url(../images/icons-sprite.png) no-repeat -182px -36px;
+	background: url(../images/icons-sprite.png) no-repeat -178px -36px;
 }
 .social-icons ul li a.gplus{
-	background: url(../images/icons-sprite.png) no-repeat -226px 0;
+	background: url(../images/icons-sprite.png) no-repeat -219px 0;
 }
 .social-icons ul li a.gplus:hover{
-	background: url(../images/icons-sprite.png) no-repeat -226px -36px;
+	background: url(../images/icons-sprite.png) no-repeat -219px -36px;
 }
 .social-icons ul li a.twit{
 	background: url(../images/icons-sprite.png) no-repeat -34px 0;
