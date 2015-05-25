@@ -159,10 +159,10 @@ a.download span{
 .social-icons ul li a.twit:hover{
 	background: url(../images/icons-sprite.png) no-repeat -34px -36px;
 }
-.social-icons ul li a.drbl{
+.social-icons ul li a.git{
 	background: url(../images/icons-sprite.png) no-repeat -66px 0;
 }
-.social-icons ul li a.drbl:hover{
+.social-icons ul li a.git:hover{
 	background: url(../images/icons-sprite.png) no-repeat -66px -36px;
 }
 .social-icons ul li a.msg{
