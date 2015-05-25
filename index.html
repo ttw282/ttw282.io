@@ -226,12 +226,38 @@
 	<!--//method-text-->
 	
 	
+		<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+			// Instantiate MixItUp:
+			$('#Container').mixItUp();
+			});
+		</script>
+
+<div id="Container">
 	<div id="projects" class="cases">
 		<div class="container" >
 			<h3>Projects</h3>
+			
+			<div class="row">
+			<div class="col-md-6">
+				<button class="filter btn btn-default" data-filter="all">All</button>
+				<button  class="filter btn btn-primary" data-filter=".cs">C#</button>
+				<button  class="filter btn btn-success" data-filter=".java">Java</button>
+				<button  class="filter btn btn-warning" data-filter=".html">HTML</button>
+				<button  class="filter btn btn-danger" data-filter=".cpp">C++</button>
+				<button  class="filter btn btn-primary" data-filter=".c">C</button>
+				<button  class="filter btn btn-success" data-filter=".js">JavaScript</button>
+			</div>
+			<div class="col-md-6">
+			</div>
+			</div>
+			
+			<br/>
+			
 			<div class="col-md-4">
-				<div class="cases-grids">
-					<div class="cases-grids-info cases-top">
+				<div class="cases-grids ">
+					<div class="cases-grids-info cases-top mix html js">
 						<img src="images/github.jpg" alt=""/>
 						<div class="caption">
 						<a href="https://github.com/ttw282/ttw282.io" target="blank">
@@ -244,7 +270,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="cases-grids-info">
+					<div class="cases-grids-info mix cs">
 						<img src="images/github.jpg" alt=""/>
 						<div class="caption">
 						<a href="https://github.com/ttw282/mental-age-calculator" target="blank">
@@ -261,7 +287,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="cases-grids">
-					<div class="cases-grids-info cases-top">
+					<div class="cases-grids-info cases-top mix java">
 						<img src="images/github.jpg" alt=""/>
 						<div class="caption">
 							<a href="https://github.com/ttw282/ECE-356" target="blank">
@@ -274,7 +300,7 @@
 								</ul>
 						</div>
 					</div>
-					<div class="cases-grids-info">
+					<div class="cases-grids-info mix cs">
 						<img src="images/github.jpg" alt=""/>
 						<div class="caption">
 						<a href="https://github.com/ttw282/WeatherApp" target="blank">
@@ -292,7 +318,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="cases-grids">
-					<div class="cases-grids-info cases-top">
+					<div class="cases-grids-info cases-top mix c">
 						<img src="images/github.jpg" alt=""/>
 						<div class="caption">
 							<a href="https://github.com/ttw282/ECE-254" target="blank">
@@ -305,7 +331,7 @@
 								</ul>
 						</div>
 					</div>
-					<div class="cases-grids-info">
+					<div class="cases-grids-info mix cpp">
 						<img src="images/github.jpg" alt=""/>
 						<div class="caption">
 						<a href="https://github.com/ttw282/ECE-250" target="blank">
@@ -320,8 +346,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
+	</div>	
+</div>
 	<!--cases-->
 	
 	<!--//cases-->
