@@ -7,6 +7,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 #Container .mix {
     display: none;
 }
+#Container1 .mix {
+    display: none;
+}
 #filters {
 	margin: 1% 0 3.3%;
 	padding: 0;

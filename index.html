@@ -43,6 +43,22 @@
 			});
 	</script>
 	<!--//end-smoth-scrolling-->
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+		// Instantiate MixItUp:
+		$('#Container').mixItUp({
+			selectors: {
+			filter: '.filter'
+			}
+		});
+		$('#Container1').mixItUp({
+			selectors: {
+			filter: '.filter1'
+			}
+		});
+		});
+	</script>
 </head>
 <body>
 	<!--header-->
@@ -126,13 +142,27 @@
 	</div>	
 	
 	<!--banner-bottom-->
+	<div id="Container1">
 	<div id="experience" class="cases">
 	
 		<div class="container" >
 		<h3>Experience</h3>
+		
+			<ul id="filters" class="clearfix">
+				<li><span class="filter1 active" data-filter="all">All</span></li>
+				<li><span class="filter1" data-filter=".asp">ASP.NET</span></li>
+				<li><span class="filter1" data-filter=".silverlight">Silverlight</span></li>
+				<li><span class="filter1" data-filter=".angular">AngularJS</span></li>
+				<li><span class="filter1" data-filter=".mongo">MongoDB</span></li>
+				<li><span class="filter1" data-filter=".sql">SQL Server</span></li>
+				<li><span class="filter1" data-filter=".oracle">Oracle DB</span></li>
+				<li><span class="filter1" data-filter=".qa">QA</span></li>
+			</ul>
+		<br/>	
+		
 		<div class="col-md-4">
 				<div class="cases-grids">
-					<div class="cases-grids-info cases-top">
+					<div class="cases-grids-info cases-top mix asp sql angular" style="width:100%">
 						<img src="images/edp.png" alt=""/>
 						<div class="caption">
 						<a href="http://www.edpsoftware.com/" target="blank">
@@ -146,7 +176,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="cases-grids-info">
+					<div class="cases-grids-info mix qa" style="width:100%">
 						<img src="images/nexj.png" alt=""/>
 						<div class="caption">
 						<a href="http://www.nexj.com" target="blank">
@@ -162,7 +192,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="cases-grids">
-					<div class="cases-grids-info cases-top">
+					<div class="cases-grids-info cases-top mix mongo sql asp angular" style="width:100%">
 						<img src="images/ibi.png" alt=""/>
 						<div class="caption">
 						<a href="http://www.ibigroup.com/" target="blank">
@@ -178,7 +208,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="cases-grids-info">
+					<div class="cases-grids-info mix silverlight" style="width:100%">
 						<img src="images/harris.png" alt=""/>
 						<div class="caption">
 						<a href="http://www.harris.com" target="blank">
@@ -197,7 +227,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="cases-grids">
-					<div class="cases-grids-info cases-top">
+					<div class="cases-grids-info cases-top mix oracle asp" style="width:100%">
 						<img src="images/boa.png" alt=""/>
 						<div class="caption">
 						<a href="http://www.bofaml.com/content/boaml/en_us/home.html" target="blank">
@@ -217,6 +247,7 @@
 			</div>
 		</div>
 	</div>	
+	</div>
 	<!--//banner-bottom-->
 	<!--method-grids-->
 	
@@ -224,15 +255,6 @@
 	<!--method-text-->
 	
 	<!--//method-text-->
-	
-	
-		<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
-		<script type="text/javascript">
-			$(function(){
-			// Instantiate MixItUp:
-			$('#Container').mixItUp();
-			});
-		</script>
 
 <div id="Container">
 	<div id="projects" class="cases">
