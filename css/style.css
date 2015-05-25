@@ -7,6 +7,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 #Container .mix {
     display: none;
 }
+#filters {
+	margin: 1% 0 3.3%;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+	#filters li {
+		display:inline-block;
+	}
+	#filters li span {
+		display: inline-block;
+		padding: 10px 30px;
+		text-decoration: none;
+		color: #666666;
+		cursor: pointer;
+		font-size: 1em;
+		font-weight: 400;
+		text-transform: uppercase;
+		border: 2px solid #666666;
+		border-radius: 4px;
+		margin-right: 0.5em;
+	}
+	#filters li span.active {
+		background:#E74C3C;
+		border: 2px solid #E74C3C;
+		color: #FFF;
+		border-radius: 7px;
+		-webkit-border-radius: 7px;
+		-moz-border-radius: 7px;
+		-o-border-radius: 7px;
+	}
 body{
 	margin:0;
 	font-family: 'Open Sans', sans-serif;
