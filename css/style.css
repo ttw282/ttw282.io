@@ -1104,11 +1104,21 @@ img.zoom-img:hover {
 .header-logo {
 	width: 21.5%;
 }
+.header-logo h2{
+	font-size:5vw;
+	font-weight:bold;
+}
+.header-logo div {
+	font-size:3vw;
+}
 .top-nav {
 	width: 61%;
 }
 .social-icons {
-	width: 16%;
+	width: 13%;
+}
+.social-icons ul{
+	width:200%;
 }
 .banner {
 	min-height: 419px;
