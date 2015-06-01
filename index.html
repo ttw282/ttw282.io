@@ -59,6 +59,19 @@
 		});
 		});
 	</script>
+	<!--ResponsiveSlides for banner-->
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(function() {
+			$(".rslides").responsiveSlides({
+				auto:false,
+				pager:false,
+				nav:true,
+				speed:500,
+				namespace:"callbacks"
+			});
+		});
+	</script>
 </head>
 <body>
 	<!--header-->
@@ -106,10 +119,29 @@
 	</div>
 	<!--//header-->
 	<!--banner-->
-	<div class="banner">
-		<div class="container">
-		</div>
-	</div>
+	<ul class="rslides">
+		<li>
+			<div class="banner">
+				<div class="container">
+				</div>
+			</div>
+			<p class="caption">University dorm</p>
+		</li>
+		<li>
+			<div class="banner1">
+				<div class="container">
+				</div>
+			</div>
+			<p class="caption">CN Tower, Toronto</p>
+		</li>
+		<li>
+			<div class="banner2">
+				<div class="container">
+				</div>
+			</div>
+			<p class="caption">University of Waterloo campus</p>
+		</li>
+</ul>
 	<!--//banner-->
 	
 	<div id="about" class="services">
