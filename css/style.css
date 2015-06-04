@@ -1182,8 +1182,21 @@ img.zoom-img:hover {
 }
 @media(max-width:1280px){
 .banner {
+	background:url(../images/uw.jpg)no-repeat 0px 0px;
 	background-size:cover;
-	min-height:550px;
+	min-height:450px;
+	position:relative;
+}
+.banner1{
+	background:url(../images/cn_tower.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:450px;
+	position:relative;
+}
+.banner2{
+	background:url(../images/waterloo_sign.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:450px;
 	position:relative;
 }
 .banner-title {
@@ -1230,8 +1243,21 @@ img.zoom-img:hover {
 	width:160%;
 }
 .banner {
+	background:url(../images/uw.jpg)no-repeat 0px 0px;
 	background-size:cover;
-	min-height:550px;
+	min-height:350px;
+	position:relative;
+}
+.banner1{
+	background:url(../images/cn_tower.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:350px;
+	position:relative;
+}
+.banner2{
+	background:url(../images/waterloo_sign.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:350px;
 	position:relative;
 }
 .banner-title {
@@ -1413,8 +1439,21 @@ span.menu {
 	top: 100%;
 }
 .banner {
+	background:url(../images/uw.jpg)no-repeat 0px 0px;
 	background-size:cover;
-	min-height:550px;
+	min-height:250px;
+	position:relative;
+}
+.banner1{
+	background:url(../images/cn_tower.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:250px;
+	position:relative;
+}
+.banner2{
+	background:url(../images/waterloo_sign.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:250px;
 	position:relative;
 }
 .banner-title {
@@ -1601,8 +1640,21 @@ span.menu {
 	padding-top: 1.2em;
 }
 .banner {
+	background:url(../images/uw.jpg)no-repeat 0px 0px;
 	background-size:cover;
-	min-height:550px;
+	min-height:250px;
+	position:relative;
+}
+.banner1{
+	background:url(../images/cn_tower.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:250px;
+	position:relative;
+}
+.banner2{
+	background:url(../images/waterloo_sign.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:250px;
 	position:relative;
 }
 .banner-title {
@@ -1755,8 +1807,21 @@ span.menu {
 	padding-top: 8px;
 }
 .banner {
+	background:url(../images/uw.jpg)no-repeat 0px 0px;
 	background-size:cover;
-	min-height:550px;
+	min-height:250px;
+	position:relative;
+}
+.banner1{
+	background:url(../images/cn_tower.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:250px;
+	position:relative;
+}
+.banner2{
+	background:url(../images/waterloo_sign.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:250px;
 	position:relative;
 }
 .banner-title {
