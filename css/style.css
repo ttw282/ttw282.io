@@ -560,6 +560,7 @@ a.download span{
 }
 .footer-grids-info ul {
 	margin: 0;
+	width:300px;
 	padding:2em 0 0 0;
 }
 .footer-grids-info ul li{
