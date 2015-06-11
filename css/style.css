@@ -518,6 +518,9 @@ a.download span{
 	font-weight: 600;
 	margin: 0 0 1em 14px;
 }
+.services div a{
+	color:blue;
+}
 .services-grids h5{
 	margin: 0;
 	font-size: 17px;
