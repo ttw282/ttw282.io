@@ -321,6 +321,18 @@ a.download span{
 	min-height:550px;
 	position:relative;
 }
+.banner3{
+	background:url(../images/iron_ring.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:550px;
+	position:relative;
+}
+.banner4{
+	background:url(../images/iron_ring2.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:550px;
+	position:relative;
+}
 .banner-title{
 	position:absolute;
 	width: 26%;
