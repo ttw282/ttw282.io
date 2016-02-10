@@ -1215,6 +1215,18 @@ img.zoom-img:hover {
 	min-height:450px;
 	position:relative;
 }
+.banner3{
+	background:url(../images/iron_ring.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:450px;
+	position:relative;
+}
+.banner4{
+	background:url(../images/iron_ring2.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:450px;
+	position:relative;
+}
 .banner-title {
 	width: 33%;
 	top: 32%;
@@ -1272,6 +1284,18 @@ img.zoom-img:hover {
 }
 .banner2{
 	background:url(../images/waterloo_sign.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:350px;
+	position:relative;
+}
+.banner3{
+	background:url(../images/iron_ring.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:350px;
+	position:relative;
+}
+.banner4{
+	background:url(../images/iron_ring2.jpg)no-repeat 0px 0px;
 	background-size:cover;
 	min-height:350px;
 	position:relative;
@@ -1468,6 +1492,18 @@ span.menu {
 }
 .banner2{
 	background:url(../images/waterloo_sign.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:250px;
+	position:relative;
+}
+.banner3{
+	background:url(../images/iron_ring.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:250px;
+	position:relative;
+}
+.banner4{
+	background:url(../images/iron_ring2.jpg)no-repeat 0px 0px;
 	background-size:cover;
 	min-height:250px;
 	position:relative;
@@ -1673,6 +1709,18 @@ span.menu {
 	min-height:250px;
 	position:relative;
 }
+.banner3{
+	background:url(../images/iron_ring.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:250px;
+	position:relative;
+}
+.banner4{
+	background:url(../images/iron_ring2.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:250px;
+	position:relative;
+}
 .banner-title {
 	top: 29%;
 }
@@ -1836,6 +1884,18 @@ span.menu {
 }
 .banner2{
 	background:url(../images/waterloo_sign.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:250px;
+	position:relative;
+}
+.banner3{
+	background:url(../images/iron_ring.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	min-height:250px;
+	position:relative;
+}
+.banner4{
+	background:url(../images/iron_ring2.jpg)no-repeat 0px 0px;
 	background-size:cover;
 	min-height:250px;
 	position:relative;
