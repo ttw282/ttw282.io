@@ -1,0 +1,227 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>English to Chinese - Name Generator</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		
+		<script>
+			var chinesechars;
+			var commonlastnames;
+			$( document ).ready(function() {
+				$.get("http://ccdb.hemiola.com/characters?fields=kMandarin,string,kTotalStrokes,kDefinition&filter=gb+simplified", function(data, status){
+					chinesechars = data;
+					
+					chinesechars.forEach(function(item){
+						if(item.kTotalStrokes > 7){
+							chinesechars.splice(chinesechars.indexOf(item), 1);
+						}
+						if(
+						item.kMandarin == "MEI2" || 
+						item.kMandarin == "LI4" || 
+						item.kMandarin == "JIE2" || 
+						item.kMandarin == "LING2" || 
+						item.kMandarin == "AI4" || 
+						item.kMandarin == "JING4" || 
+						item.kMandarin == "HUA1" || 
+						item.kMandarin == "YUE4"
+						){
+							item.gender = 'female';
+						}
+						else{
+							item.gender = 'male';
+						}
+					});
+				});
+				
+				commonlastnames = [
+				{char:'王', pinyin:'wang2'}, 
+				{char:'李', pinyin:'li3'}, 
+				{char:'张', pinyin:'zhang1'}, 
+				{char:'陈', pinyin:'chen2'}, 
+				{char:'杨', pinyin:'yang2'}, 
+				{char:'黄', pinyin:'huang2'}, 
+				{char:'徐', pinyin:'xu2'}, 
+				{char:'孙', pinyin:'sun1'}, 
+				{char:'马', pinyin:'ma3'}, 
+				{char:'胡', pinyin:'hu2'}, 
+				{char:'郭', pinyin:'guo1'}, 
+				{char:'邓', pinyin:'deng4'}, 
+				{char:'彭', pinyin:'peng2'}, 
+				{char:'田', pinyin:'tian2'}, 
+				{char:'任', pinyin:'ren4'}, 
+				{char:'范', pinyin:'fan2'}, 
+				{char:'白', pinyin:'bai2'}, 
+				{char:'秦', pinyin:'qin2'}, 
+				{char:'孔', pinyin:'kong3'}, 
+				{char:'艾', pinyin:'ai4'}, 
+				{char:'倪', pinyin:'ni2'}, 
+				{char:'欧阳', pinyin:'ou1yang2'}, 
+				{char:'蒋', pinyin:'jiang1'}];
+			});
+
+			
+			
+			function btnClick(){
+				var lastname = $('#lastnametxt').val();
+				var firstname = $('#firstnametxt').val();
+				var numcharstotal = $('#numcharsdropdown').val();
+				var gender = $('#genderdropdown').val();
+				
+				var errors = "";
+				if(lastname == null || lastname == undefined || lastname == ""){
+					errors += 'Please enter a last name.\n';
+				}
+				if(firstname == null || firstname == undefined || firstname == ""){
+					errors += 'Please enter a first name.\n';
+				}
+				if(errors != ""){
+					$('#errors').text(errors);
+					return;
+				}
+				
+				
+				var processedlastname = processLastName(lastname);
+				var processedfirstname = processFirstName(firstname, numcharstotal, gender);
+				$('#generatedname').text(processedlastname + processedfirstname);
+			}
+			
+			function processLastName(lastname){
+				var result = "";
+				var firstletter = lastname[0];
+				if(firstletter != null && firstletter != undefined){
+					commonlastnames.forEach(function(item){
+						if(item.pinyin[0].toLowerCase() == firstletter.toLowerCase()){
+							result = item.char + " (" + item.pinyin + ") ";
+						}
+					});
+				}
+				
+				if(result == ""){
+					result = commonlastnames[Math.floor(Math.random()*commonlastnames.length)].char;
+				}
+				
+				return result;
+			}
+			
+			function processFirstName(firstname, numcharstotal, gender){
+				var result = "";
+				var firstletter = firstname[0];
+				
+				var filteredsecondchars = [];
+				var filteredthirdchars = [];
+				
+				var secondchar = "";
+				var thirdchar = "";
+				
+				var desc = "";
+				
+				if(gender == "female"){
+					chinesechars.forEach(function(item){
+						if(item.kMandarin.toLowerCase()[0] == firstletter.toLowerCase() && item.gender == 'female'){
+							filteredsecondchars.push(item);
+						}
+						if(item.gender == 'female'){
+							filteredthirdchars.push(item);
+						}
+					});
+				}
+				else{
+					chinesechars.forEach(function(item){
+						if(item.kMandarin.toLowerCase()[0] == firstletter.toLowerCase() && item.gender == 'male'){
+							filteredsecondchars.push(item);
+						}
+						if(item.gender == 'male'){
+							filteredthirdchars.push(item);
+						}
+					});
+				}
+				//make sure theres enough for female too!
+				if(filteredsecondchars.length != 0){
+					var item = filteredsecondchars[Math.floor(Math.random()*filteredsecondchars.length)];
+					secondchar = item.string + " (" + item.kMandarin.toLowerCase() + ") ";
+					desc += item.kDefinition + " || ";
+				}
+				else{
+					var item = filteredthirdchars[Math.floor(Math.random()*filteredthirdchars.length)];
+					secondchar = item.string + " (" + item.kMandarin.toLowerCase() + ") ";
+					desc += item.kDefinition + " || ";
+				}
+				
+				
+				
+				if(numcharstotal == 3){
+					var item = filteredthirdchars[Math.floor(Math.random()*filteredthirdchars.length)];
+					thirdchar = item.string + " (" + item.kMandarin.toLowerCase() + ") ";
+					desc += item.kDefinition + " ";
+				}
+
+				
+				return secondchar + thirdchar + desc;
+			}
+		</script>
+		
+	</head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<body>
+	<h1 class="jumbotron text-center">English to Chinese Name Generator</h1>
+	<table class="table table-bordered" style="text-align:center">
+	<tr>
+		<td>
+		Last Name:
+		</td>
+		<td>
+			<input id="lastnametxt"type="text" class="form-control"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		First Name:
+		</td>
+		<td>
+			<input id="firstnametxt"type="text" class="form-control"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		Num chars total in Chinese name: 
+		</td>
+		<td>
+		
+		<select id='numcharsdropdown' class="form-control">
+			<option value="2">Two</option>
+			<option value="3">Three</option>
+		</select>
+		
+		</td>
+	</tr>
+	<tr>
+		<td>
+		Gender:
+		</td>
+		<td>
+			<select id='genderdropdown' class="form-control">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">
+		<button id="submitbtn" class="btn btn-primary" onclick="btnClick()">Generate</button>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<label id='generatedname'>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<label style="color:red" id='errors'>
+		</td>
+	</tr>
+	</table>
+</html>
