@@ -19,8 +19,10 @@
 					
 					var totalspentincanada = canadaprice * litrestobuy;
 					
-					var totalspentinus = convertedusprice * litrestobuy;
-					
+					var usgascost = convertedusprice * litrestobuy;
+					var usdrivingcost = ((distance * 2) * fueleconomy / 100 * convertedusprice);
+					var totalspentinus = usgascost + usdrivingcost;
+										
 					result += "Total spent fueling in Canada: $" + totalspentincanada.toFixed(2) + " CAD<br/>";
 					
 					result += "Total spent fueling in US: $" + totalspentinus.toFixed(2) + " CAD<br/>";
