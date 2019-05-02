@@ -21,13 +21,13 @@
 					
 					var totalspentinus = convertedusprice * litrestobuy;
 					
-					result += "Total spent fueling in Canada: $" + totalspentincanada + " CAD<br/>";
+					result += "Total spent fueling in Canada: $" + totalspentincanada.toFixed(2) + " CAD<br/>";
 					
-					result += "Total spent fueling in US: $" + totalspentinus + " CAD<br/>";
+					result += "Total spent fueling in US: $" + totalspentinus.toFixed(2) + " CAD<br/>";
 					
-					result += "Total savings: $" + (totalspentincanada - totalspentinus) + " CAD<br/>";
+					result += "Total savings: $" + (totalspentincanada - totalspentinus).toFixed(2) + " CAD<br/>";
 					
-					result += "It's as if you were working for $" + (totalspentincanada - totalspentinus) / (minutes * 2 / 60) + " CAD per hour!";
+					result += "It's as if you were working for $" + ((totalspentincanada - totalspentinus) / (minutes * 2 / 60)).toFixed(2) + " CAD per hour!";
 					
 					$('#result').html(result);
 				}
