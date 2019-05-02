@@ -12,10 +12,24 @@
 					var fueleconomy = $('#fueleconomy').val();
 					var exchangerate = $('#exchangerate').val();
 					var litrestobuy = $('#litrestobuy').val();
+					var minutes = $('#minutes').val();
+					var result = "";
 
 					var convertedusprice = usprice / exchangerate / 3.78541;
 					
 					var totalspentincanada = canadaprice * litrestobuy;
+					
+					var totalspentinus = convertedusprice * litrestobuy;
+					
+					result += "Total spent fueling in Canada: $" + totalspentincanada + " CAD<br/>";
+					
+					result += "Total spent fueling in US: $" + totalspentinus + " CAD<br/>";
+					
+					result += "Total savings: $" + (totalspentincanada - totalspentinus) + " CAD<br/>";
+					
+					result += "It's as if you were working for $" + (totalspentincanada - totalspentinus) / (minutes * 2 / 60) + " CAD per hour!";
+					
+					$('#result').html(result);
 				}
 		</script>
 		
@@ -53,6 +67,7 @@
 			</div>
 		</td>
 	</tr>
+	
 	<tr>
 		<td>
 		<div class="input-group">
@@ -74,6 +89,15 @@
 	<tr>
 		<td>
 		<div class="input-group">
+			<input id="minutes"type="number" placeholder="Approx. time in minutes driving one way" class="form-control"/>
+			<span class="input-group-addon">mins</span>
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		<div class="input-group">
 			<span class="input-group-addon">How many</span>
 			<input id="exchangerate"type="number" placeholder="USD" class="form-control"/>
 			<span class="input-group-addon">= 1 CAD</span>
@@ -88,7 +112,7 @@
 	</tr>
 	<tr>
 		<td colspan="2">
-			<label id='generatedname'>
+			<label id='result'>
 		</td>
 	</tr>
 	<tr>
