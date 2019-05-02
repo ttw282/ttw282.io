@@ -5,19 +5,18 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<link rel="shortcut icon" href="http://cdn.onlinewebfonts.com/svg/download_207933.png" />
 		<script>
-			$( document ).ready(function() {
-				
-				function calculate(){
+			function btnClick(){
 					var canadaprice = $('#canadaprice').val();
 					var usprice = $('#usprice').val();
 					var distance = $('#distance').val();
 					var fueleconomy = $('#fueleconomy').val();
 					var exchangerate = $('#exchangerate').val();
+					var litrestobuy = $('#litrestobuy').val();
 
+					var convertedusprice = usprice / exchangerate / 3.78541;
 					
+					var totalspentincanada = canadaprice * litrestobuy;
 				}
-				
-			}
 		</script>
 		
 	</head>
@@ -66,7 +65,7 @@
 	<tr>
 		<td>
 		<div class="input-group">
-			<input id="fueleconomy"type="number" placeholder="Litres of fuel you need to buy" class="form-control"/>
+			<input id="litrestobuy"type="number" placeholder="Litres of fuel you need to buy" class="form-control"/>
 			<span class="input-group-addon">Litres</span>
 			</div>
 		</td>
@@ -84,7 +83,7 @@
 	
 	<tr>
 		<td colspan="2">
-		<button id="calcbtn" class="btn btn-primary" onclick="calculate()">Is it worth it?</button>
+		<button id="calcbtn" class="btn btn-primary" onclick="btnClick()">Is it worth it?</button>
 		</td>
 	</tr>
 	<tr>
