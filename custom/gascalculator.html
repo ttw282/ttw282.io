@@ -7,6 +7,16 @@
 		<script>
 			$( document ).ready(function() {
 				
+				function calculate(){
+					var canadaprice = $('#canadaprice').val();
+					var usprice = $('#usprice').val();
+					var distance = $('#distance').val();
+					var fueleconomy = $('#fueleconomy').val();
+					var exchangerate = $('#exchangerate').val();
+
+					
+				}
+				
 			}
 		</script>
 		
@@ -48,7 +58,16 @@
 		<td>
 		<div class="input-group">
 			<input id="fueleconomy"type="number" placeholder="Average fuel economy of your car" class="form-control"/>
-			<span class="input-group-addon">L/100 km</span>
+			<span class="input-group-addon">Litres/100 km</span>
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		<div class="input-group">
+			<input id="fueleconomy"type="number" placeholder="Litres of fuel you need to buy" class="form-control"/>
+			<span class="input-group-addon">Litres</span>
 			</div>
 		</td>
 	</tr>
@@ -65,7 +84,7 @@
 	
 	<tr>
 		<td colspan="2">
-		<button id="submitbtn" class="btn btn-primary" onclick="btnClick()">Is it worth it?</button>
+		<button id="calcbtn" class="btn btn-primary" onclick="calculate()">Is it worth it?</button>
 		</td>
 	</tr>
 	<tr>
