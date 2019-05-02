@@ -12,38 +12,9 @@
 		<title>Is it worth the trip to the US for gas?</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<link rel="shortcut icon" href="http://cdn.onlinewebfonts.com/svg/download_207933.png" />
-		<script>
-			function btnClick(){
-					var canadaprice = $('#canadaprice').val();
-					var usprice = $('#usprice').val();
-					var distance = $('#distance').val();
-					var fueleconomy = $('#fueleconomy').val();
-					var exchangerate = $('#exchangerate').val();
-					var litrestobuy = $('#litrestobuy').val();
-					var minutes = $('#minutes').val();
-					var result = "";
-
-					var convertedusprice = usprice / exchangerate / 3.78541;
-					
-					var totalspentincanada = canadaprice * litrestobuy;
-					
-					var usgascost = convertedusprice * litrestobuy;
-					var usdrivingcost = ((distance * 2) * fueleconomy / 100 * convertedusprice);
-					var totalspentinus = usgascost + usdrivingcost;
-										
-					result += "Total spent fueling in Canada: $" + totalspentincanada.toFixed(2) + " CAD<br/>";
-					
-					result += "Total spent fueling in US: $" + totalspentinus.toFixed(2) + " CAD<br/>";
-					
-					result += "Total savings: $" + (totalspentincanada - totalspentinus).toFixed(2) + " CAD<br/>";
-					
-					result += "It's as if you were working for $" + ((totalspentincanada - totalspentinus) / (minutes * 2 / 60)).toFixed(2) + " CAD per hour!";
-					
-					$('#result').html(result);
-				}
-		</script>
-		
+		<script src="gascalculator.min.js"></script>
 	</head>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<body>
 	<h1 class="jumbotron text-center">Is it worth the trip to the US for gas?</h1>
