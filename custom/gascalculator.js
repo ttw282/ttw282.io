@@ -33,8 +33,7 @@ function changeLang() {
     lang = lang == "en" ? "zh" : "en";
 
     if (lang == "en") {
-        $('#title').text('去美国加油划算吗？');
-        $('#changelangbtn').html('Switch to English');
+        $('#title').text('Is it worth the trip to the US for gas?');
         $('.dontknow').text("Don't know!");
         $('#dollarperlitre').text('$ per litre');
         $('#cad').text('CAD');
@@ -44,9 +43,18 @@ function changeLang() {
         $('#usprice').attr('placeholder', 'Price in the US');
         $('#distance').attr('placeholder', 'Distance from US gas station');
         $('#km').text('km');
+        $('#fueleconomy').attr('placeholder', 'Avg. fuel economy');
+        $('#litreper100km').text('Litres/100 km');
+        $('#litrestobuy').attr('placeholder', 'Litres of fuel you need to buy');
+        $('#litres').text('Litres');
+        $('#minutes').attr('placeholder', 'Approx. time driving one way');
+        $('#mins').text('mins');
+        $('#howmany').text('How many');
+        $('#exchangerate').attr('placeholder', 'USD');
+        $('#equalsonecad').text('= 1 CAD');
+        $('#calcbtn').html('Is it worth it?');
     } else if (lang == "zh") {
-        $('#title').text('Is it worth the trip to the US for gas?');
-        $('#changelangbtn').html('换中文版');
+        $('#title').text('去美国加油划算吗？');
         $('.dontknow').text("不知道！");
         $('#dollarperlitre').text('每升几刀');
         $('#cad').text('加币');
@@ -56,5 +64,15 @@ function changeLang() {
         $('#usprice').attr('placeholder', '美国油价');
         $('#distance').attr('placeholder', '离美国加油站多远');
         $('#km').text('公里');
+        $('#fueleconomy').attr('placeholder', '平均汽油耗量');
+        $('#litreper100km').text('升/百公里');
+        $('#litrestobuy').attr('placeholder', '要买多少升油');
+        $('#litres').text('升');
+        $('#minutes').attr('placeholder', '单程开车时间');
+        $('#mins').text('分钟');
+        $('#howmany').text('多少');
+        $('#exchangerate').attr('placeholder', '美金');
+        $('#equalsonecad').text('等于1加币');
+        $('#calcbtn').html('划算吗？');
     }
 }

@@ -21,7 +21,7 @@
     <table class="table table-responsive" style="text-align:center">
         <tr>
             <td colspan="2">
-                <button id="changelangbtn" onclick="changeLang()" class="btn btn-default">换中文版</button>
+                <button id="changelangbtn" onclick="changeLang()" class="btn btn-default">English/中文</button>
             </td>
         </tr>
         <tr>
@@ -58,8 +58,8 @@
         <tr>
             <td>
                 <div class="input-group">
-                    <input id="fueleconomy" type="number" placeholder="Avg fuel economy" class="form-control" />
-                    <span class="input-group-addon input-sm">Litres/100 km</span>
+                    <input id="fueleconomy" type="number" placeholder="Avg. fuel economy" class="form-control" />
+                    <span id="litreper100km" class="input-group-addon input-sm">Litres/100 km</span>
                     <span class="input-group-addon input-sm"><a class="dontknow" target="blank" href="https://fcr-ccc.nrcan-rncan.gc.ca/en">Don't know!</a></span>
                 </div>
             </td>
@@ -69,7 +69,7 @@
             <td>
                 <div class="input-group">
                     <input id="litrestobuy" type="number" placeholder="Litres of fuel you need to buy" class="form-control" />
-                    <span class="input-group-addon input-sm">Litres</span>
+                    <span id="litres" class="input-group-addon input-sm">Litres</span>
                 </div>
             </td>
         </tr>
@@ -78,7 +78,7 @@
             <td>
                 <div class="input-group">
                     <input id="minutes" type="number" placeholder="Approx. time driving one way" class="form-control" />
-                    <span class="input-group-addon input-sm">mins</span>
+                    <span id="mins" class="input-group-addon input-sm">mins</span>
                 </div>
             </td>
         </tr>
@@ -86,9 +86,9 @@
         <tr>
             <td>
                 <div class="input-group">
-                    <span class="input-group-addon input-sm">How many</span>
+                    <span id="howmany" class="input-group-addon input-sm">How many</span>
                     <input id="exchangerate" type="number" placeholder="USD" class="form-control" />
-                    <span class="input-group-addon input-sm">= 1 CAD</span>
+                    <span id="equalsonecad" class="input-group-addon input-sm">= 1 CAD</span>
                     <span class="input-group-addon input-sm"><a class="dontknow" target="blank" href="https://www.xe.com/currencyconverter/convert/?Amount=1&From=CAD&To=USD">Don't know!</a></span>
                 </div>
             </td>
