@@ -34,7 +34,11 @@ function changeLang() {
 
     if (lang == "en") {
         $('#title').text('Is it worth the trip to the US for gas?');
+        $('#changelangbtn').html('换中文版');
+        $('.dontknow').text("Don't know!");
     } else if (lang == "zh") {
         $('#title').text('去美国加油划算吗？');
+        $('#changelangbtn').html('Switch to English');
+        $('.dontknow').text("不知道!");
     }
 }
