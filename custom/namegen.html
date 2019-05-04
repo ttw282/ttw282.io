@@ -129,6 +129,8 @@
             if (errors != "") {
                 $('#errors').text(errors);
                 return;
+            } else {
+                $('#errors').text("");
             }
 
             var processedlastname = processLastName(lastname);
