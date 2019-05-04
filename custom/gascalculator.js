@@ -18,7 +18,7 @@ function btnClick() {
     var usdrivingcost = ((distance * 2) * fueleconomy / 100 * convertedusprice);
     var totalspentinus = usgascost + usdrivingcost;
 
-    if (locale == "en") {
+    if (lang == "en") {
         result += "Total spent fueling in Canada: $" + totalspentincanada.toFixed(2) + " CAD<br/>";
 
         result += "Total spent fueling in US: $" + totalspentinus.toFixed(2) + " CAD<br/>";
@@ -26,7 +26,7 @@ function btnClick() {
         result += "Total savings: $" + (totalspentincanada - totalspentinus).toFixed(2) + " CAD<br/>";
 
         result += "It's as if you were working for $" + ((totalspentincanada - totalspentinus) / (minutes * 2 / 60)).toFixed(2) + " CAD per hour!";
-    } else if (locale == "zh") {
+    } else if (lang == "zh") {
         result += "在加拿大加油的总费用: $" + totalspentincanada.toFixed(2) + " 加币<br/>";
 
         result += "在美国加油的总费用: $" + totalspentinus.toFixed(2) + " 加币<br/>";
