@@ -6,117 +6,117 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/27/27746.png" />
 		<script src="gascalculator.min.js"></script>
-			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-6793498934240310",
-          enable_page_level_ads: true
-     });
-</script>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({
+				  google_ad_client: "ca-pub-6793498934240310",
+				  enable_page_level_ads: true
+			 });
+		</script>
 	</head>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<body>
-	<h1 class="jumbotron text-center">Is it worth the trip to the US for gas?</h1>
-	<table class="table table-responsive" style="text-align:center">
-	
-	<tr>
-		<td>
-		<div class="input-group">
-			<span class="input-group-addon input-sm">$ per litre</span>
-			<input id="canadaprice" type="number" placeholder="Price in Canada" class="form-control"/>
-			<span class="input-group-addon input-sm">CAD</span>
-			<span class="input-group-addon input-sm"><a target="blank" href="https://www.gasbuddy.com/CAN">Don't know!</a></span>
-			</div>
-	</td>
-	</tr>
-	
-	<tr>
-		<td>
-		<div class="input-group">
-			<span class="input-group-addon input-sm">$ per gallon</span>
-			<input id="usprice"type="number" placeholder="Price in the US" class="form-control"/>
-			<span class="input-group-addon input-sm">USD</span>
-			<span class="input-group-addon input-sm"><a target="blank" href="https://www.gasbuddy.com/USA">Don't know!</a></span>
-			</div>
+		<h1 class="jumbotron text-center">Is it worth the trip to the US for gas?</h1>
+		<table class="table table-responsive" style="text-align:center">
+		
+		<tr>
+			<td>
+			<div class="input-group">
+				<span class="input-group-addon input-sm">$ per litre</span>
+				<input id="canadaprice" type="number" placeholder="Price in Canada" class="form-control"/>
+				<span class="input-group-addon input-sm">CAD</span>
+				<span class="input-group-addon input-sm"><a target="blank" href="https://www.gasbuddy.com/CAN">Don't know!</a></span>
+				</div>
 		</td>
-	</tr>
-	
-	<tr>
-		<td>
-		<div class="input-group">
-			<input id="distance"type="number" placeholder="Distance from US gas station" class="form-control"/>
-			<span class="input-group-addon input-sm">km</span>
-			</div>
-		</td>
-	</tr>
-	
-	<tr>
-		<td>
-		<div class="input-group">
-			<input id="fueleconomy"type="number" placeholder="Avg fuel economy" class="form-control"/>
-			<span class="input-group-addon input-sm">Litres/100 km</span>
-			<span class="input-group-addon input-sm"><a target="blank" href="https://fcr-ccc.nrcan-rncan.gc.ca/en">Don't know!</a></span>
-			</div>
-		</td>
-	</tr>
-	
-	<tr>
-		<td>
-		<div class="input-group">
-			<input id="litrestobuy"type="number" placeholder="Litres of fuel you need to buy" class="form-control"/>
-			<span class="input-group-addon input-sm">Litres</span>
-			</div>
-		</td>
-	</tr>
-	
-	<tr>
-		<td>
-		<div class="input-group">
-			<input id="minutes"type="number" placeholder="Approx. time driving one way" class="form-control"/>
-			<span class="input-group-addon input-sm">mins</span>
-			</div>
-		</td>
-	</tr>
-	
-	<tr>
-		<td>
-		<div class="input-group">
-			<span class="input-group-addon input-sm">How many</span>
-			<input id="exchangerate"type="number" placeholder="USD" class="form-control"/>
-			<span class="input-group-addon input-sm">= 1 CAD</span>
-		    <span class="input-group-addon input-sm"><a target="blank" href="https://www.xe.com/currencyconverter/convert/?Amount=1&From=CAD&To=USD">Don't know!</a></span>
-			</div>
-		</td>
-	</tr>
-	
-	<tr>
-		<td colspan="2">
-		<button id="calcbtn" class="btn btn-primary btn-lg" onclick="btnClick()">Is it worth it?</button>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<label id='result'>
-		</td>
-	</tr>
-	
-	<tr>
-		<td colspan="2">
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_donations" />
-<input type="hidden" name="business" value="2SZ5T2VC3X65G" />
-<input type="hidden" name="item_name" value="To make more apps like these!" />
-<input type="hidden" name="currency_code" value="CAD" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
-</form>
+		</tr>
+		
+		<tr>
+			<td>
+			<div class="input-group">
+				<span class="input-group-addon input-sm">$ per gallon</span>
+				<input id="usprice"type="number" placeholder="Price in the US" class="form-control"/>
+				<span class="input-group-addon input-sm">USD</span>
+				<span class="input-group-addon input-sm"><a target="blank" href="https://www.gasbuddy.com/USA">Don't know!</a></span>
+				</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<div class="input-group">
+				<input id="distance"type="number" placeholder="Distance from US gas station" class="form-control"/>
+				<span class="input-group-addon input-sm">km</span>
+				</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<div class="input-group">
+				<input id="fueleconomy"type="number" placeholder="Avg fuel economy" class="form-control"/>
+				<span class="input-group-addon input-sm">Litres/100 km</span>
+				<span class="input-group-addon input-sm"><a target="blank" href="https://fcr-ccc.nrcan-rncan.gc.ca/en">Don't know!</a></span>
+				</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<div class="input-group">
+				<input id="litrestobuy"type="number" placeholder="Litres of fuel you need to buy" class="form-control"/>
+				<span class="input-group-addon input-sm">Litres</span>
+				</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<div class="input-group">
+				<input id="minutes"type="number" placeholder="Approx. time driving one way" class="form-control"/>
+				<span class="input-group-addon input-sm">mins</span>
+				</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<div class="input-group">
+				<span class="input-group-addon input-sm">How many</span>
+				<input id="exchangerate"type="number" placeholder="USD" class="form-control"/>
+				<span class="input-group-addon input-sm">= 1 CAD</span>
+				<span class="input-group-addon input-sm"><a target="blank" href="https://www.xe.com/currencyconverter/convert/?Amount=1&From=CAD&To=USD">Don't know!</a></span>
+				</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="2">
+			<button id="calcbtn" class="btn btn-primary btn-lg" onclick="btnClick()">Is it worth it?</button>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<label id='result'>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="2">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	<input type="hidden" name="cmd" value="_donations" />
+	<input type="hidden" name="business" value="2SZ5T2VC3X65G" />
+	<input type="hidden" name="item_name" value="To make more apps like these!" />
+	<input type="hidden" name="currency_code" value="CAD" />
+	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+	<img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
+	</form>
 
-		</td>
-	</tr>
-	
-	</table>
-	<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ccaa5565c0dc1ff"></script>
-
+			</td>
+		</tr>
+		
+		</table>
+		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ccaa5565c0dc1ff"></script>
+	</body>
 </html>
