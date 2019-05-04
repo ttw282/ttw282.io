@@ -1,3 +1,5 @@
+﻿var lang = "en";
+
 function btnClick() {
 	var canadaprice = $('#canadaprice').val();
 	var usprice = $('#usprice').val();
@@ -25,4 +27,14 @@ function btnClick() {
 	result += "It's as if you were working for $" + ((totalspentincanada - totalspentinus) / (minutes * 2 / 60)).toFixed(2) + " CAD per hour!";
 					
 	$('#result').html(result);
+}
+
+function changeLang() {
+    lang = lang == "en" ? "zh" : "en";
+
+    if (lang == "en") {
+        $('#title').text('Is it worth the trip to the US for gas?');
+    } else if (lang == "zh") {
+        $('#title').text('去美国加油划算吗？');
+    }
 }
