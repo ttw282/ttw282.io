@@ -43,6 +43,7 @@ function changeLang() {
     lang = lang == "en" ? "zh" : "en";
 
     if (lang == "en") {
+        $('head title', window.parent.document).text('Is it worth the trip to the US for gas?');
         $('#title').text('Is it worth the trip to the US for gas?');
         $('.dontknow').text("Don't know!");
         $('#dollarperlitre').text('$ per litre');
@@ -65,6 +66,7 @@ function changeLang() {
         $('#calcbtn').html('Is it worth it?');
         $('#pleasesupport').text('Please support the making of more apps like these!');
     } else if (lang == "zh") {
+        $('head title', window.parent.document).text('去美国加油划算吗？');
         $('#title').text('去美国加油划算吗？');
         $('.dontknow').text("不知道！");
         $('#dollarperlitre').text('每升几刀');
