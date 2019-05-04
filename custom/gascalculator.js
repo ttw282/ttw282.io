@@ -63,6 +63,7 @@ function changeLang() {
         $('#exchangerate').attr('placeholder', 'USD');
         $('#equalsonecad').text('= 1 CAD');
         $('#calcbtn').html('Is it worth it?');
+        $('#pleasesupport').text('Please support the making of more apps like these!');
     } else if (lang == "zh") {
         $('#title').text('去美国加油划算吗？');
         $('.dontknow').text("不知道！");
@@ -84,6 +85,7 @@ function changeLang() {
         $('#exchangerate').attr('placeholder', '美金');
         $('#equalsonecad').text('等于1加币');
         $('#calcbtn').html('划算吗？');
+        $('#pleasesupport').text('请支持我开发类似这样的工具！');
     }
 }
 
