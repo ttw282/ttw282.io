@@ -33,12 +33,28 @@ function changeLang() {
     lang = lang == "en" ? "zh" : "en";
 
     if (lang == "en") {
-        $('#title').text('Is it worth the trip to the US for gas?');
-        $('#changelangbtn').html('换中文版');
-        $('.dontknow').text("Don't know!");
-    } else if (lang == "zh") {
         $('#title').text('去美国加油划算吗？');
         $('#changelangbtn').html('Switch to English');
-        $('.dontknow').text("不知道!");
+        $('.dontknow').text("Don't know!");
+        $('#dollarperlitre').text('$ per litre');
+        $('#cad').text('CAD');
+        $('#canadaprice').attr('placeholder', 'Price in Canada');
+        $('#dollarpergallon').text('$ per gallon');
+        $('#usd').text('USD');
+        $('#usprice').attr('placeholder', 'Price in the US');
+        $('#distance').attr('placeholder', 'Distance from US gas station');
+        $('#km').text('km');
+    } else if (lang == "zh") {
+        $('#title').text('Is it worth the trip to the US for gas?');
+        $('#changelangbtn').html('换中文版');
+        $('.dontknow').text("不知道！");
+        $('#dollarperlitre').text('每升几刀');
+        $('#cad').text('加币');
+        $('#canadaprice').attr('placeholder', '加拿大油价');
+        $('#dollarpergallon').text('每加仑几刀');
+        $('#usd').text('美金');
+        $('#usprice').attr('placeholder', '美国油价');
+        $('#distance').attr('placeholder', '离美国加油站多远');
+        $('#km').text('公里');
     }
 }
